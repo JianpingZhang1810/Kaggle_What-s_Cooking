@@ -1,0 +1,22 @@
+http://www.voidcn.com/article/p-akbjepwf-ben.html
+1.分词，构造词袋
+
+2.统计每个客户所点的菜的单词是否在词袋中出现过，或者统计出现次数，这里就是词袋模型和词集模型了
+
+3.构造分类器，如：决策树、随机森林、逻辑式地回归、再或者贝叶斯分类   决策树65%
+
+4.预测
+随机森林的链接 https://www.kaggle.com/normallydistrbuted/simple-bag-of-words-with-rf  78%
+
+
+Logistic Regression https://blog.csdn.net/u011467621/article/details/48735929 76%
+
+别人的方法
+1词袋模型 +决策树/随机森林/logistic regression/贝叶斯分类
+
+我想的方法
+1 也使用词袋模型作为特征表述，因为数据稀疏而且值是binary，采用and运算来表征菜品之间的相似度。之后采用KNN的方法进行预测。
+2 通过降维的的方式将稀疏的词袋模型特征转化为低维向量特征，尝试PCA或是word embedding的方式来表达特征，进而在低维空间上运用logistic regression、 SVM、 neural network 进行分类任务。
+
+
+
